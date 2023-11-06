@@ -1,0 +1,219 @@
+.slidercontainer-lg {
+  position: relative;
+  height: 1080px;
+  overflow: hidden;
+  direction: ltr;
+
+  @media #{$size767} {
+    height: 648px;
+  }
+
+  .slickArrowsHero {
+    position: absolute;
+    top: 70%;
+    z-index: 1000000000;
+    text-align: left;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    .slick-dots {
+      padding: 0;
+      list-style: none;
+      transition: all 0.3s;
+      align-items: center;
+      display: flex;
+
+      li {
+        align-items: center;
+        justify-content: center;
+        display: inline-flex;
+        margin: 0 8px;
+
+        button {
+          height: 11px;
+          background: #26345f !important;
+          color: #26345f;
+          border: 0;
+          width: 11px;
+          overflow: hidden;
+        }
+
+        &.slick-active {
+          button {
+            background: #d4af37 !important;
+            color: #d4af37;
+          }
+        }
+      }
+    }
+    i.icon-left.slick-arrow,
+    i.icon-right.slick-arrow {
+      background: #26345f;
+      width: 35px;
+      height: 35px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    i.icon-right.slick-arrow {
+      order: 1;
+    }
+    i.icon-left.slick-arrow {
+      order: 0;
+    }
+  }
+  .slider {
+    box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 1);
+  }
+
+  .slider-track {
+    transition: all 3s cubic-bezier(0.42, 0.1, 0.38, 0.7);
+  }
+
+  .item {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    width: 36%;
+    @media #{$size767} {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: 1080px;
+      object-fit: cover;
+      transition: all 3s cubic-bezier(0.42, 0.1, 0.38, 0.7);
+      transform: scale(1.2);
+    }
+
+    &.slick-active img {
+      transform: scale(1);
+    }
+  }
+}
+
+.productsCarousel .slick-slide {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8);
+  transition: all 3s cubic-bezier(0.42, 0.1, 0.38, 0.7);
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+.productsCarousel .slick-slide,
+.productsCarousel
+  .slick-slide[aria-hidden="true"]:not(.slick-cloned)
+  ~ .slick-cloned[aria-hidden="true"] {
+  transform: scale(0.8, 0.8);
+  transition: all 1s cubic-bezier(0.66, 0.3, 0.05, 0.91);
+}
+
+/* Active center slide (You can change anything here for cenetr slide)*/
+.productsCarousel .slick-center,
+.productsCarousel
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+  + .slick-cloned[aria-hidden="true"] {
+  transform: scale(1.1);
+}
+
+.productsCarousel .slick-current.slick-active {
+  transform: scale(1.1);
+  background: transparent;
+}
+
+.slick-next,
+.slick-prev {
+  z-index: 5;
+}
+
+.slick-next {
+  right: 15px;
+}
+
+.slick-prev {
+  left: 15px;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: #000;
+  font-size: 26px;
+}
+
+.slick-dots li button:before {
+  width: 27px !important;
+  height: 7px !important;
+}
+
+.slick-dots {
+  padding: 0;
+  list-style: none;
+  transition: all 0.3s;
+  align-items: center;
+  display: flex;
+  li {
+    align-items: center !important;
+    justify-content: center !important;
+    display: inline-flex !important;
+    margin: 0 8px !important;
+    button {
+      height: 8px !important;
+      background: #26345f !important !important;
+      color: #26345f !important;
+      border: 0 !important;
+      width: 8px !important;
+      overflow: hidden !important;
+    }
+    &.slick-active {
+      button {
+        background: #d4af37 !important !important;
+        color: #d4af37 !important;
+        width: 8 !important;
+      }
+    }
+  }
+}
+
+i.icon-left.slick-arrow {
+  order: 1;
+}
+
+.slickArrows {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 170px;
+  z-index: 3;
+  i {
+    width: 49px;
+    background: #005b4b;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 21px;
+  }
+  i.icon-right.slick-arrow {
+    position: relative;
+    right: -30px;
+  }
+  i.icon-left.slick-arrow {
+    position: relative;
+    left: -30px;
+  }
+}

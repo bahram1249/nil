@@ -1,0 +1,185 @@
+button.hamburger.hamburger--collapse {
+  display: none;
+
+  @media #{$size991} {
+    display: block;
+    padding: 0;
+    top: 15px;
+    position: relative;
+    z-index: 99999;
+  }
+}
+
+// .sfm-navicon-button.x.sf_label_default {
+//   display: none;
+// }
+.menuBase {
+  background: #313131;
+}
+.menuBase {
+  // .sfm-rollback {
+  //   position: unset !important;
+  // }
+  // transition: all 0.3s;
+  // .sfm-navicon-button {
+  //   position: relative;
+  //   display: block !important;
+  // }
+  // .sfm-pos-right .sfm-rollback {
+  //   right: unset;
+  //   left: unset;
+  // }
+
+  // .sfm-color1.sfm-theme-none.sfm-label-visible.sfm-label-metro {
+  //   flex: 0 0 24%;
+  // }
+  // .sfm-pos-right .sfm-rollback {
+  //   right: unset !important;
+  //   left: unset !important;
+  //   top: 43px !important;
+  //   margin: 0 !important;
+  //   padding: 0 !important;
+  //   height: 40px !important;
+  // }
+
+  &.active {
+    background: #5a5a5ac2;
+    z-index: 999999999;
+    position: fixed;
+    width: 100%;
+    height: 78px;
+    backdrop-filter: blur(5px);
+    top: 0;
+
+    @media #{$size991} {
+      background: unset;
+      z-index: unset;
+      position: unset;
+      width: unset;
+      height: unset;
+      backdrop-filter: unset;
+    }
+  }
+
+  ul.menuSmall li {
+    display: block;
+    margin: 16px 0;
+  }
+
+  nav {
+    background: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 11;
+    padding-top: 20px;
+    padding-bottom: 11px;
+    margin-bottom: -10%;
+
+    @media #{$size991} {
+      margin-bottom: 0;
+    }
+    .searchBox {
+      display: none;
+    }
+    .logo {
+    }
+
+    .lightSwitcher {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff !important;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(2px);
+      i {
+        color: #fff;
+        font-size: 24px;
+        position: relative;
+        top: 6px;
+        margin-right: 20px;
+        left: 9px;
+        padding: 6px;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      flex: 1;
+      margin-right: 35px;
+
+      @media #{$size991} {
+        display: none;
+      }
+
+      li {
+        display: inline;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        margin: 18px;
+
+        @media #{$size991} {
+          display: block;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          color: #000 !important;
+          margin: 17px 0;
+          text-align: center;
+        }
+
+        a {
+          color: #242424;
+        }
+
+        &.active {
+          background: #414141;
+          padding: 9px 12px 34px;
+          border-radius: 10px;
+          margin: 26px;
+        }
+      }
+    }
+
+    .addons {
+      display: flex;
+      flex-flow: row-reverse;
+      .icon-search {
+        color: #fff;
+        font-size: 24px;
+        position: relative;
+        top: 11px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+nav.active ul {
+  @media #{$size991} {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+  }
+}

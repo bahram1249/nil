@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>املاک نیل</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <style>
+      /* استایل بخش نقشه */
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+
+    <style>
+      #villa-list {
+        margin-top: 20px;
+      }
+
+      .villa-item {
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      .villa-item:hover {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+
+  <body class="single">
+    <div class="menuBase">
+      <nav class="container-lg">
+        <div class="logoMobile">
+          <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <a href="/"
+            ><img
+              class="logo"
+              src="<?php echo ot_get_option( 'logo') ?>"
+              alt=""
+          /></a>
+        </div>
+        <div class="logoBox">
+          <a href="/"
+            ><img class="logo" src="assets/img/png/logo.png" alt=""
+          /></a>
+        </div>
+
+        <ul>
+          <li>صفحه اصلی</li>
+          <li>ویلا های اطراف من</li>
+          <li>همه فایل ها</li>
+          <li>درباره ما</li>
+          <li>تماس با ما</li>
+        </ul>
+
+        <div class="addons">
+          <a href="#!"><i class="icon-search"></i></a>
+          <div class="lightSwitcher">
+            <i class="icon-sun active"></i>
+            <i class="icon-moon"></i>
+          </div>
+        </div>
+        <div class="searchBox">
+          <input type="text" class="search" />
+          <i class="icon-times"></i>
+        </div>
+      </nav>
+    </div>
+
+    <section class="productDetail">
+      <div class="container-lg">
+        <div class="slider-container-lg">
+          <div class="slider-for">
+            <img class="item-slick" src="assets/img/png/single.png" alt="Alt" />
+            <img
+              class="item-slick"
+              src="assets/img/png/single-2.png"
+              alt="Alt"
+            />
+            <img
+              class="item-slick"
+              src="assets/img/png/single-3.png"
+              alt="Alt"
+            />
+            <img
+              class="item-slick"
+              src="assets/img/png/single-4.png"
+              alt="Alt"
+            />
+          </div>
+          <div class="slider-nav">
+            <img class="item-slick" src="assets/img/png/single.png" alt="Alt" />
+            <img
+              class="item-slick"
+              src="assets/img/png/single-2.png"
+              alt="Alt"
+            />
+            <img
+              class="item-slick"
+              src="assets/img/png/single-3.png"
+              alt="Alt"
+            />
+            <img
+              class="item-slick"
+              src="assets/img/png/single-4.png"
+              alt="Alt"
+            />
+          </div>
+        </div>
+        <div class="productDescription">
+          <h1>۱۲۰۰ متر سوپرلاکچری در لم آباد ملارد</h1>
+          <p class="price">2.6 میلیارد تومان</p>
+          <div class="buttons">
+            <button class="share">
+              <i class="icon-share"></i>
+            </button>
+            <button class="like">
+              <i class="icon-haert"></i>
+            </button>
+            <button class="bookmark">
+              <i class="icon-bookmark"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="fullDetail">
+              <h4 class="titleHead">اطلاعات کلی ملک</h4>
+              <span class="code">کد:<span class="number">1259</span></span>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="featureItem">
+                    <i class="icon-ruller"></i>
+                    <h4>متراژ <span>800 متر زیر بنا و 450 متر بنا</span></h4>
+                  </div>
+                  <div class="featureItem">
+                    <i class="icon-room"></i>
+                    <h4>تعداد اتاق <span>3 خواب مستر</span></h4>
+                  </div>
+                  <div class="featureItem">
+                    <i class="icon-bath"></i>
+                    <h4>تعداد حمام <span>3 حمام مستر</span></h4>
+                  </div>
+                  <div class="featureItem">
+                    <i class="icon-cool"></i>
+                    <h4>سرمایش <span>کولر گازی</span></h4>
+                  </div>
+                  <div class="featureItem">
+                    <i class="icon-ruller"></i>
+                    <h4>سرویس ایرانی <span>دارد</span></h4>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="featureItem">
+                    <i class="icon-type"></i>
+                    <h4>نوع <span>لاکچری</span></h4>
+                  </div>
+                  <div class="featureItem">
+                    <i class="icon-location"></i>
+                    <h4>محله <span>ملارد</span></h4>
+                  </div>
+                  <div class="featureItem">
+                    <i class="icon-floor"></i>
+                    <h4>طبقه <span>4 طبقه</span></h4>
+                  </div>
+                  <div class="featureItem">
+                    <i class="icon-haet"></i>
+                    <h4>گرمایش <span>ندارد</span></h4>
+                  </div>
+                  <div class="featureItem">
+                    <i class="icon-toilet"></i>
+                    <h4>سرویس فرنگی <span>دارد</span></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <h4 class="titleHead">مشاور این ملک</h4>
+            <div class="avatarBox">
+              <div class="avatar">
+                <img class="profile" src="assets/img/png/avatar.png" alt="" />
+                <div class="badge">
+                  <img src="assets/img/png/badge.svg" alt="" />
+                </div>
+                <h5>تایید شده</h5>
+              </div>
+              <div class="detail">
+                <h2 class="name">آرمان باقری</h2>
+                <p>تماس</p>
+                <a class="call" href="callto:09199662822">09199662822</a>
+                <div class="sharer">
+                  <a href=""><i class="icon-telegram"></i></a>
+                  <a href=""><i class="icon-whatsapp"></i></a>
+                  <a href=""><i class="icon-call"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="col-md-12">
+          <h4 class="titleHead mb-1">توضیحات</h4>
+          <p>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی
+            در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را
+            می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+            الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این
+            صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و
+            شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای
+            اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد
+            استفاده قرار گیرد.
+          </p>
+        </div>
+        <hr />
+        <div class="col-md-12">
+          <h4 class="titleHead mb-1">سایر امکانات</h4>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="itemBox">
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="itemBox">
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="itemBox">
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="itemBox">
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+                <div class="items">
+                  <span>پارکینگ</span>
+                  <i class="icon-tick"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-5">
+                <h4 class="titleHead">موارد مهم</h4>
+              </div>
+              <div class="col-md-7">
+                <h4 class="titleHead">موقعیت روی نقشه</h4>
+
+                <iframe
+                  width="100%"
+                  height="350"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=50.97158432006836%2C35.50064869786537%2C51.19817733764649%2C35.622977290844084&amp;layer=mapnik&amp;marker=35.561836334433146%2C51.08488082885742"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="features">
+      <div class="container-lg">
+        <div class="featureWrapper">
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <img src="assets/img/png/support.png" alt="" />
+              <h4>پشتیبانی آنلاین</h4>
+            </div>
+            <div class="col-md-3 col-6">
+              <img src="assets/img/png/verified.png" alt="" />
+              <h4>مشاورین تایید شده</h4>
+            </div>
+            <div class="col-md-3 col-6">
+              <img src="assets/img/png/many.png" alt="" />
+              <h4>تنوع فایل های زیاد</h4>
+            </div>
+            <div class="col-md-3 col-6">
+              <img src="assets/img/png/easy.png" alt="" />
+              <h4>فرایند خرید آسان</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-lg">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-4">
+            <img src="assets/img/png/footer-logo.png" alt="" />
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری
+            </p>
+          </div>
+          <div class="col-md-2">
+            <ul class="clinks">
+              <li>این لینک تسته</li>
+              <li>این لینک تسته</li>
+              <li>این لینک تسته</li>
+              <li>این لینک تسته</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <div class="certs">
+              <img src="assets/img/png/enamad.png" alt="" />
+              <img src="assets/img/png/samandehi.png" alt="" />
+            </div>
+          </div>
+          <div class="col-md-3 text-center">
+            <div class="call">
+              <div class="item">
+                <h4>شماره تماس دفتر مرکزی:</h4>
+                <p>02122361945</p>
+              </div>
+              <div class="item">
+                <h4>شماره تماس دفتر مرکزی:</h4>
+                <p>02122361945</p>
+              </div>
+            </div>
+            <div class="socials">
+              <a href=""><i class="icon-linkedin"></i></a>
+              <a href=""><i class="icon-whatsapp"></i></a>
+              <a href=""><i class="icon-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    D
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/custom.min.js"></script>
+    <!-- استفاده از کتابخانه‌های Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script></script>
+  </body>
+</html>

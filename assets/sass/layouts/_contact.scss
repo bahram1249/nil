@@ -1,0 +1,94 @@
+.care {
+  margin-top: 81px;
+  @media #{$size767} {
+    margin-top: 25px;
+  }
+  .socialIcons {
+    margin-bottom: 32px;
+    border: 1px solid #9696965c;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    i {
+      margin-left: 25px;
+      vertical-align: sub;
+      color: #3e4151;
+    }
+  }
+  .address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 32px;
+    border: 1px solid #9696965c;
+    padding: 10px;
+
+    i {
+      font-size: 28px;
+      color: #62013a;
+      display: contents;
+    }
+    .titles {
+      margin-right: 20px;
+      h4 {
+        font-family: "Yekan Bakh";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 31px;
+        color: #62013a;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 31px;
+        text-align: right;
+        color: #000000;
+      }
+    }
+  }
+  .fullAddress {
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 25px !important;
+    text-align: right !important;
+    color: #000000 !important;
+  }
+  input.wpcf7-form-control.wpcf7-text,
+  textarea.wpcf7-form-control.wpcf7-textarea {
+    border: 0;
+    background: #f4f4f4;
+    padding: 14px;
+    margin: 0 0 33px;
+    text-align: right;
+    width: 100%;
+  }
+  input.wpcf7-form-control.has-spinner.wpcf7-submit {
+    background: #d4af37;
+    border: 0;
+    padding: 7px 58px;
+    color: #fff;
+    font-size: 18px;
+  }
+  .btns {
+    text-align: left;
+    direction: ltr;
+  }
+  .wpcf7-spinner {
+    position: relative;
+    top: 9px;
+  }
+  .wpcf7 form .wpcf7-response-output {
+    padding: 11px !important;
+    margin: 17px 0 13px !important;
+    background: #ff3f3f;
+    color: #fff !important;
+    border: 0 !important;
+  }
+}

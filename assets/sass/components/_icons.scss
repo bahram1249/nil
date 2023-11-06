@@ -1,0 +1,488 @@
+@font-face {
+	font-family: "Icons";
+	src: url('../fonts/icons/Icons.eot');
+	src: url('../fonts/icons/Icons.eot?#iefix') format('eot'),
+	url('../fonts/icons/Icons.woff2') format('woff2'),
+	url('../fonts/icons/Icons.woff') format('woff'),
+	url('../fonts/icons/Icons.ttf') format('truetype'),
+	url('../fonts/icons/Icons.svg#Icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "Icons";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+	
+		@if $filename == add-to-cart {
+		$char: "\E001";
+	}
+		@if $filename == architect {
+		$char: "\E002";
+	}
+		@if $filename == arrow {
+		$char: "\E003";
+	}
+		@if $filename == as {
+		$char: "\E004";
+	}
+		@if $filename == bag {
+		$char: "\E005";
+	}
+		@if $filename == basket {
+		$char: "\E006";
+	}
+		@if $filename == bath {
+		$char: "\E007";
+	}
+		@if $filename == bookmark {
+		$char: "\E008";
+	}
+		@if $filename == bottom {
+		$char: "\E009";
+	}
+		@if $filename == box {
+		$char: "\E00A";
+	}
+		@if $filename == calendar {
+		$char: "\E00B";
+	}
+		@if $filename == call {
+		$char: "\E00C";
+	}
+		@if $filename == carpenter {
+		$char: "\E00D";
+	}
+		@if $filename == cart {
+		$char: "\E00E";
+	}
+		@if $filename == catalog {
+		$char: "\E00F";
+	}
+		@if $filename == certificate {
+		$char: "\E010";
+	}
+		@if $filename == clean {
+		$char: "\E011";
+	}
+		@if $filename == coin {
+		$char: "\E012";
+	}
+		@if $filename == cool {
+		$char: "\E013";
+	}
+		@if $filename == customer {
+		$char: "\E014";
+	}
+		@if $filename == date {
+		$char: "\E015";
+	}
+		@if $filename == edu {
+		$char: "\E016";
+	}
+		@if $filename == envelope {
+		$char: "\E017";
+	}
+		@if $filename == exist {
+		$char: "\E018";
+	}
+		@if $filename == export {
+		$char: "\E019";
+	}
+		@if $filename == express {
+		$char: "\E01A";
+	}
+		@if $filename == facebook {
+		$char: "\E01B";
+	}
+		@if $filename == gp {
+		$char: "\E01C";
+	}
+		@if $filename == haert {
+		$char: "\E01D";
+	}
+		@if $filename == heart {
+		$char: "\E01E";
+	}
+		@if $filename == heater {
+		$char: "\E01F";
+	}
+		@if $filename == hospital {
+		$char: "\E020";
+	}
+		@if $filename == hq {
+		$char: "\E021";
+	}
+		@if $filename == instagram {
+		$char: "\E022";
+	}
+		@if $filename == label {
+		$char: "\E023";
+	}
+		@if $filename == left {
+		$char: "\E024";
+	}
+		@if $filename == linkedin {
+		$char: "\E025";
+	}
+		@if $filename == location {
+		$char: "\E026";
+	}
+		@if $filename == mail {
+		$char: "\E027";
+	}
+		@if $filename == moon {
+		$char: "\E028";
+	}
+		@if $filename == movie {
+		$char: "\E029";
+	}
+		@if $filename == order {
+		$char: "\E02A";
+	}
+		@if $filename == pack {
+		$char: "\E02B";
+	}
+		@if $filename == pause {
+		$char: "\E02C";
+	}
+		@if $filename == play {
+		$char: "\E02D";
+	}
+		@if $filename == price {
+		$char: "\E02E";
+	}
+		@if $filename == quality {
+		$char: "\E02F";
+	}
+		@if $filename == research {
+		$char: "\E030";
+	}
+		@if $filename == right {
+		$char: "\E031";
+	}
+		@if $filename == room {
+		$char: "\E032";
+	}
+		@if $filename == ruller {
+		$char: "\E033";
+	}
+		@if $filename == search {
+		$char: "\E034";
+	}
+		@if $filename == services {
+		$char: "\E035";
+	}
+		@if $filename == share {
+		$char: "\E036";
+	}
+		@if $filename == shipping {
+		$char: "\E037";
+	}
+		@if $filename == shop {
+		$char: "\E038";
+	}
+		@if $filename == software {
+		$char: "\E039";
+	}
+		@if $filename == sun {
+		$char: "\E03A";
+	}
+		@if $filename == support {
+		$char: "\E03B";
+	}
+		@if $filename == telegram {
+		$char: "\E03C";
+	}
+		@if $filename == tell {
+		$char: "\E03D";
+	}
+		@if $filename == tick {
+		$char: "\E03E";
+	}
+		@if $filename == times {
+		$char: "\E03F";
+	}
+		@if $filename == toilet {
+		$char: "\E040";
+	}
+		@if $filename == top {
+		$char: "\E041";
+	}
+		@if $filename == trash {
+		$char: "\E042";
+	}
+		@if $filename == truck {
+		$char: "\E043";
+	}
+		@if $filename == twitter {
+		$char: "\E044";
+	}
+		@if $filename == type {
+		$char: "\E045";
+	}
+		@if $filename == userl {
+		$char: "\E046";
+	}
+		@if $filename == videos {
+		$char: "\E047";
+	}
+		@if $filename == warranty {
+		$char: "\E048";
+	}
+		@if $filename == water {
+		$char: "\E049";
+	}
+		@if $filename == whatsapp {
+		$char: "\E04A";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-add-to-cart {
+	@include icon(add-to-cart);
+}
+.icon-architect {
+	@include icon(architect);
+}
+.icon-arrow {
+	@include icon(arrow);
+}
+.icon-as {
+	@include icon(as);
+}
+.icon-bag {
+	@include icon(bag);
+}
+.icon-basket {
+	@include icon(basket);
+}
+.icon-bath {
+	@include icon(bath);
+}
+.icon-bookmark {
+	@include icon(bookmark);
+}
+.icon-bottom {
+	@include icon(bottom);
+}
+.icon-box {
+	@include icon(box);
+}
+.icon-calendar {
+	@include icon(calendar);
+}
+.icon-call {
+	@include icon(call);
+}
+.icon-carpenter {
+	@include icon(carpenter);
+}
+.icon-cart {
+	@include icon(cart);
+}
+.icon-catalog {
+	@include icon(catalog);
+}
+.icon-certificate {
+	@include icon(certificate);
+}
+.icon-clean {
+	@include icon(clean);
+}
+.icon-coin {
+	@include icon(coin);
+}
+.icon-cool {
+	@include icon(cool);
+}
+.icon-customer {
+	@include icon(customer);
+}
+.icon-date {
+	@include icon(date);
+}
+.icon-edu {
+	@include icon(edu);
+}
+.icon-envelope {
+	@include icon(envelope);
+}
+.icon-exist {
+	@include icon(exist);
+}
+.icon-export {
+	@include icon(export);
+}
+.icon-express {
+	@include icon(express);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-gp {
+	@include icon(gp);
+}
+.icon-haert {
+	@include icon(haert);
+}
+.icon-heart {
+	@include icon(heart);
+}
+.icon-heater {
+	@include icon(heater);
+}
+.icon-hospital {
+	@include icon(hospital);
+}
+.icon-hq {
+	@include icon(hq);
+}
+.icon-instagram {
+	@include icon(instagram);
+}
+.icon-label {
+	@include icon(label);
+}
+.icon-left {
+	@include icon(left);
+}
+.icon-linkedin {
+	@include icon(linkedin);
+}
+.icon-location {
+	@include icon(location);
+}
+.icon-mail {
+	@include icon(mail);
+}
+.icon-moon {
+	@include icon(moon);
+}
+.icon-movie {
+	@include icon(movie);
+}
+.icon-order {
+	@include icon(order);
+}
+.icon-pack {
+	@include icon(pack);
+}
+.icon-pause {
+	@include icon(pause);
+}
+.icon-play {
+	@include icon(play);
+}
+.icon-price {
+	@include icon(price);
+}
+.icon-quality {
+	@include icon(quality);
+}
+.icon-research {
+	@include icon(research);
+}
+.icon-right {
+	@include icon(right);
+}
+.icon-room {
+	@include icon(room);
+}
+.icon-ruller {
+	@include icon(ruller);
+}
+.icon-search {
+	@include icon(search);
+}
+.icon-services {
+	@include icon(services);
+}
+.icon-share {
+	@include icon(share);
+}
+.icon-shipping {
+	@include icon(shipping);
+}
+.icon-shop {
+	@include icon(shop);
+}
+.icon-software {
+	@include icon(software);
+}
+.icon-sun {
+	@include icon(sun);
+}
+.icon-support {
+	@include icon(support);
+}
+.icon-telegram {
+	@include icon(telegram);
+}
+.icon-tell {
+	@include icon(tell);
+}
+.icon-tick {
+	@include icon(tick);
+}
+.icon-times {
+	@include icon(times);
+}
+.icon-toilet {
+	@include icon(toilet);
+}
+.icon-top {
+	@include icon(top);
+}
+.icon-trash {
+	@include icon(trash);
+}
+.icon-truck {
+	@include icon(truck);
+}
+.icon-twitter {
+	@include icon(twitter);
+}
+.icon-type {
+	@include icon(type);
+}
+.icon-userl {
+	@include icon(userl);
+}
+.icon-videos {
+	@include icon(videos);
+}
+.icon-warranty {
+	@include icon(warranty);
+}
+.icon-water {
+	@include icon(water);
+}
+.icon-whatsapp {
+	@include icon(whatsapp);
+}

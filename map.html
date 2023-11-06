@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>املاک نیل</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <style>
+      /* استایل بخش نقشه */
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+
+    <style>
+      #villa-list {
+        margin-top: 20px;
+      }
+
+      .villa-item {
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      .villa-item:hover {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+
+  <body class="single">
+    <div class="menuBase">
+      <nav class="container-lg">
+        <div class="logoMobile">
+          <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <a href="/"
+            ><img
+              class="logo"
+              src="<?php echo ot_get_option( 'logo') ?>"
+              alt=""
+          /></a>
+        </div>
+        <div class="logoBox">
+          <a href="/"
+            ><img class="logo" src="assets/img/png/logo.png" alt=""
+          /></a>
+        </div>
+
+        <ul>
+          <li>صفحه اصلی</li>
+          <li>ویلا های اطراف من</li>
+          <li>همه فایل ها</li>
+          <li>درباره ما</li>
+          <li>تماس با ما</li>
+        </ul>
+
+        <div class="addons">
+          <a href="#!"><i class="icon-search"></i></a>
+          <div class="lightSwitcher">
+            <i class="icon-sun active"></i>
+            <i class="icon-moon"></i>
+          </div>
+        </div>
+        <div class="searchBox">
+          <input type="text" class="search" />
+          <i class="icon-times"></i>
+        </div>
+      </nav>
+    </div>
+
+    <section class="cases">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="map"></div>
+            <div class="titles">
+              <div class="row">
+                <div class="col-md-6">
+                  <h5>لیست ویلاها</h5>
+                </div>
+                <div class="col-md-6 text-left">
+                  <a href="" class="all">همه ویلاها</a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="item">
+                  <div class="productSlider">
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                  </div>
+                  <h5>۱۲۰۰ متر سوپرلاکچری در لم آباد ملارد</h5>
+                  <div class="features">
+                    <div class="items">
+                      <i class="icon-location"></i>
+                      <span>ملارد</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-floor"></i>
+                      <span>4 طبقه</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-room"></i>
+                      <span>3 خواب</span>
+                    </div>
+                  </div>
+                  <div class="priceBox">
+                    <div class="code">کد: ۱۲۵۹</div>
+                    <div class="price">
+                      <span class="prefix">قیمت</span>
+                      <span>2.6 میلیارد</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="item">
+                  <div class="productSlider">
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                  </div>
+                  <h5>۱۲۰۰ متر سوپرلاکچری در لم آباد ملارد</h5>
+                  <div class="features">
+                    <div class="items">
+                      <i class="icon-location"></i>
+                      <span>ملارد</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-floor"></i>
+                      <span>4 طبقه</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-room"></i>
+                      <span>3 خواب</span>
+                    </div>
+                  </div>
+                  <div class="priceBox">
+                    <div class="code">کد: ۱۲۵۹</div>
+                    <div class="price">
+                      <span class="prefix">قیمت</span>
+                      <span>2.6 میلیارد</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="item">
+                  <div class="productSlider">
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                  </div>
+                  <h5>۱۲۰۰ متر سوپرلاکچری در لم آباد ملارد</h5>
+                  <div class="features">
+                    <div class="items">
+                      <i class="icon-location"></i>
+                      <span>ملارد</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-floor"></i>
+                      <span>4 طبقه</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-room"></i>
+                      <span>3 خواب</span>
+                    </div>
+                  </div>
+                  <div class="priceBox">
+                    <div class="code">کد: ۱۲۵۹</div>
+                    <div class="price">
+                      <span class="prefix">قیمت</span>
+                      <span>2.6 میلیارد</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="item">
+                  <div class="productSlider">
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                  </div>
+                  <h5>۱۲۰۰ متر سوپرلاکچری در لم آباد ملارد</h5>
+                  <div class="features">
+                    <div class="items">
+                      <i class="icon-location"></i>
+                      <span>ملارد</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-floor"></i>
+                      <span>4 طبقه</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-room"></i>
+                      <span>3 خواب</span>
+                    </div>
+                  </div>
+                  <div class="priceBox">
+                    <div class="code">کد: ۱۲۵۹</div>
+                    <div class="price">
+                      <span class="prefix">قیمت</span>
+                      <span>2.6 میلیارد</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="item">
+                  <div class="productSlider">
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                  </div>
+                  <h5>۱۲۰۰ متر سوپرلاکچری در لم آباد ملارد</h5>
+                  <div class="features">
+                    <div class="items">
+                      <i class="icon-location"></i>
+                      <span>ملارد</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-floor"></i>
+                      <span>4 طبقه</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-room"></i>
+                      <span>3 خواب</span>
+                    </div>
+                  </div>
+                  <div class="priceBox">
+                    <div class="code">کد: ۱۲۵۹</div>
+                    <div class="price">
+                      <span class="prefix">قیمت</span>
+                      <span>2.6 میلیارد</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="item">
+                  <div class="productSlider">
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                    <img src="assets/img/png/slide.png" alt="" />
+                  </div>
+                  <h5>۱۲۰۰ متر سوپرلاکچری در لم آباد ملارد</h5>
+                  <div class="features">
+                    <div class="items">
+                      <i class="icon-location"></i>
+                      <span>ملارد</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-floor"></i>
+                      <span>4 طبقه</span>
+                    </div>
+                    <div class="items">
+                      <i class="icon-room"></i>
+                      <span>3 خواب</span>
+                    </div>
+                  </div>
+                  <div class="priceBox">
+                    <div class="code">کد: ۱۲۵۹</div>
+                    <div class="price">
+                      <span class="prefix">قیمت</span>
+                      <span>2.6 میلیارد</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="features">
+      <div class="container-lg">
+        <div class="featureWrapper">
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <img src="assets/img/png/support.png" alt="" />
+              <h4>پشتیبانی آنلاین</h4>
+            </div>
+            <div class="col-md-3 col-6">
+              <img src="assets/img/png/verified.png" alt="" />
+              <h4>مشاورین تایید شده</h4>
+            </div>
+            <div class="col-md-3 col-6">
+              <img src="assets/img/png/many.png" alt="" />
+              <h4>تنوع فایل های زیاد</h4>
+            </div>
+            <div class="col-md-3 col-6">
+              <img src="assets/img/png/easy.png" alt="" />
+              <h4>فرایند خرید آسان</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-lg">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-4">
+            <img src="assets/img/png/footer-logo.png" alt="" />
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری
+            </p>
+          </div>
+          <div class="col-md-2">
+            <ul class="clinks">
+              <li>این لینک تسته</li>
+              <li>این لینک تسته</li>
+              <li>این لینک تسته</li>
+              <li>این لینک تسته</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <div class="certs">
+              <img src="assets/img/png/enamad.png" alt="" />
+              <img src="assets/img/png/samandehi.png" alt="" />
+            </div>
+          </div>
+          <div class="col-md-3 text-center">
+            <div class="call">
+              <div class="item">
+                <h4>شماره تماس دفتر مرکزی:</h4>
+                <p>02122361945</p>
+              </div>
+              <div class="item">
+                <h4>شماره تماس دفتر مرکزی:</h4>
+                <p>02122361945</p>
+              </div>
+            </div>
+            <div class="socials">
+              <a href=""><i class="icon-linkedin"></i></a>
+              <a href=""><i class="icon-whatsapp"></i></a>
+              <a href=""><i class="icon-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/custom.min.js"></script>
+    <!-- استفاده از کتابخانه‌های Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Sample data for your houses (latitude, longitude, title)
+        var houses = [
+          { lat: 35.6892, lng: 51.389, title: "House 1" },
+          { lat: 35.7, lng: 51.4, title: "House 2" },
+          { lat: 35.71, lng: 51.41, title: "House 3" },
+          // Add more houses as needed
+        ];
+
+        // Initialize the map
+        var map = L.map("map").setView([35.6892, 51.389], 12);
+
+        // Add the OpenStreetMap tile layer to the map
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(
+          map
+        );
+
+        // Loop through the houses data and create custom markers for each house
+        for (var i = 0; i < houses.length; i++) {
+          var house = houses[i];
+          var marker = L.marker([house.lat, house.lng]).addTo(map);
+          marker.bindPopup(house.title); // Add a popup with the house title
+        }
+      });
+    </script>
+  </body>
+</html>
