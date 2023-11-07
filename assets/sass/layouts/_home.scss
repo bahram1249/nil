@@ -302,7 +302,6 @@ body {
       .code {
         color: #000;
         text-align: center;
-        font-family: IRANSansXFaNum;
         font-size: 16px;
         font-style: normal;
         font-weight: 900;
@@ -311,7 +310,6 @@ body {
       .price {
         color: #00a651;
         text-align: center;
-        font-family: IRANSansXFaNum;
         font-size: 21px;
         font-style: normal;
         font-weight: 900;
@@ -846,7 +844,6 @@ img.item-slick.slick-slide {
     span {
       color: #444;
       text-align: center;
-      font-family: IRANSansXFaNum;
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -874,10 +871,13 @@ img.item-slick.slick-slide {
   h2 {
     color: #000;
     text-align: center;
-    font-size: 36px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+    @media #{$size767} {
+      font-size: 24px;
+    }
   }
   .detail {
     p {
@@ -901,6 +901,9 @@ img.item-slick.slick-slide {
       background: #00a651;
       display: inline-block;
       margin-bottom: 26px;
+      @media #{$size767} {
+        font-size: 17px;
+      }
     }
     .sharer {
       i {
@@ -913,7 +916,7 @@ img.item-slick.slick-slide {
     .profile {
       border-radius: 56px;
       border: 1px solid #000;
-      width: 100%;
+      width: 80%;
     }
     h5 {
       text-align: center;
@@ -1005,7 +1008,6 @@ section.cases {
     p {
       color: #001d0e;
       text-align: justify;
-      font-family: IRANSansX;
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
@@ -1059,6 +1061,8 @@ footer ul.clinks li {
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    display: inline;
+    margin-right: 15px;
   }
 }
 
@@ -1080,4 +1084,140 @@ footer ul.clinks li {
     margin: 1em 1em 3em;
     text-align: center;
   }
+}
+
+.cities {
+  text-align: right;
+  display: none;
+  background: white;
+  padding: 27px;
+  border-radius: 30px;
+  border: 1px solid #d7d7d7;
+  h5.headingCities {
+    background: #f7c231;
+    padding: 11px;
+    border-radius: 8px;
+  }
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+      background: #f7f7f7;
+      margin: 9px 0;
+      padding: 10px 15px;
+      border-radius: 12px;
+      cursor: pointer;
+      &:hover {
+        background: #dddddd;
+      }
+    }
+  }
+}
+
+h5.allCities {
+  background: #3f51b5;
+  padding: 11px;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  display: inline-block;
+}
+
+.allCitiesWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  svg.closeCities {
+    position: relative;
+    top: -7px;
+    cursor: pointer;
+  }
+}
+
+.blogItem {
+  img {
+    margin-bottom: 10px;
+  }
+  a {
+    background: #f7c231;
+    width: 100%;
+    display: block;
+    color: #fff;
+    padding: 8px;
+    border-radius: 12px;
+  }
+  h5 {
+    font-size: 17px !important;
+    font-weight: 500 !important;
+  }
+}
+
+.singleBlog {
+  img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    margin-bottom: 1em;
+  }
+  h1 {
+    margin-bottom: 1;
+  }
+  .titleBlog {
+    border-bottom: 1px solid #f3f3f3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+  }
+  .content {
+    p {
+      text-align: justify;
+      margin: 10px 0;
+    }
+  }
+}
+
+.care .address .titles {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.care .address {
+  border: 0 !important;
+}
+.care .address i {
+  font-size: 28px;
+  color: #ce991e !important;
+  display: contents;
+}
+
+.care .address .titles h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 31px;
+  color: #efb01d !important;
+}
+
+.care .socials a {
+  margin-left: 11px !important;
+}
+
+.single .cases .item img {
+  border-radius: 30px;
+}
+
+.descriptionWrapper {
+  padding: 25px;
+  background: #f6f6f6;
+  border-radius: 20px;
+  border: 1px solid #d6d6d6;
 }

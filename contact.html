@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>املاک نیل</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <style>
+      /* استایل بخش نقشه */
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+
+    <style>
+      #villa-list {
+        margin-top: 20px;
+      }
+
+      .villa-item {
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      .villa-item:hover {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+
+  <body class="single">
+    <div class="menuBase">
+      <nav class="container-lg">
+        <div class="logoMobile">
+          <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <a href="/"
+            ><img
+              class="logo"
+              src="<?php echo ot_get_option( 'logo') ?>"
+              alt=""
+          /></a>
+        </div>
+        <div class="logoBox">
+          <a href="/"
+            ><img class="logo" src="assets/img/png/logo.png" alt=""
+          /></a>
+        </div>
+
+        <ul>
+          <li>صفحه اصلی</li>
+          <li>ویلا های اطراف من</li>
+          <li>همه فایل ها</li>
+          <li>درباره ما</li>
+          <li>تماس با ما</li>
+        </ul>
+
+        <div class="addons">
+          <a href="#!"><i class="icon-search"></i></a>
+          <div class="lightSwitcher">
+            <i class="icon-sun active"></i>
+            <i class="icon-moon"></i>
+          </div>
+        </div>
+        <div class="searchBox">
+          <input type="text" class="search" />
+          <i class="icon-times"></i>
+        </div>
+      </nav>
+    </div>
+    <div class="care">
+      <div class="container-lg">
+        <div class="wrapper">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="address">
+                <i class="icon-tell"></i>
+                <div class="titles">
+                  <h4>تماس تلفنی با مشاورین</h4>
+                  <p>021-22623830</p>
+                </div>
+              </div>
+              <div class="address">
+                <i class="icon-location"></i>
+                <div class="titles">
+                  <h4>آدرس دفتر مرکزی</h4>
+                  <p class="addresses">شعبه 1 شریعتی بالاتر از مترو قلهک</p>
+                  <p class="addresses">شعبه 2 پیروزی تقاطع امام علی</p>
+                  <p class="addresses">شعبه 3 صادقیه - کاشانی</p>
+                  <p class="addresses">شعبه 4 جنت آباد شمالی</p>
+                </div>
+              </div>
+              <div class="address">
+                <i class="icon-social"></i>
+                <div class="titles">
+                  <h4>شبکه های اجتماعی</h4>
+
+                  <div class="socials">
+                    <a
+                      href="https://instagram.com/academy_energy.ir?igshid=MmJiY2I4NDBkZg=="
+                      ><i class="icon-whatsapp" aria-hidden="true"></i
+                    ></a>
+                    <a href="https://t.me/academy_energy1403"
+                      ><i class="icon-instagram" aria-hidden="true"></i
+                    ></a>
+                    <a href="https://wa.me/989354047190"
+                      ><i class="icon-telegram" aria-hidden="true"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <iframe
+                width="100%"
+                height="350"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=51.435059309005744%2C35.773383809073174%2C51.439538598060615%2C35.7753728047711&amp;layer=mapnik&amp;marker=35.77437831314108%2C51.43729895353317"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-lg">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-4">
+            <img src="assets/img/png/footer-logo.png" alt="" />
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری
+            </p>
+          </div>
+          <div class="col-md-2">
+            <ul class="clinks">
+              <li>این لینک تسته</li>
+              <li>این لینک تسته</li>
+              <li>این لینک تسته</li>
+              <li>این لینک تسته</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <div class="certs">
+              <img src="assets/img/png/enamad.png" alt="" />
+              <img src="assets/img/png/samandehi.png" alt="" />
+            </div>
+          </div>
+          <div class="col-md-3 text-center">
+            <div class="call">
+              <div class="item">
+                <h4>شماره تماس دفتر مرکزی:</h4>
+                <p>02122361945</p>
+              </div>
+              <div class="item">
+                <h4>شماره تماس دفتر مرکزی:</h4>
+                <p>02122361945</p>
+              </div>
+            </div>
+            <div class="socials">
+              <a href=""><i class="icon-linkedin"></i></a>
+              <a href=""><i class="icon-whatsapp"></i></a>
+              <a href=""><i class="icon-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    D
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/custom.min.js"></script>
+    <!-- استفاده از کتابخانه‌های Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script></script>
+  </body>
+</html>

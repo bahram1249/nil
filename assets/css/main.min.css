@@ -551,8 +551,8 @@ html,body{margin:0;padding:0}
 .cases .item .features{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-pack:distribute;justify-content:space-around}
 .cases .item .features .items{color:#717171;text-align:center;font-size:16px;font-style:normal;font-weight:600;line-height:normal}
 .cases .item .priceBox{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:15px 26px 15px}
-.cases .item .priceBox .code{color:#000;text-align:center;font-family:IRANSansXFaNum;font-size:16px;font-style:normal;font-weight:900;line-height:normal}
-.cases .item .priceBox .price{color:#00a651;text-align:center;font-family:IRANSansXFaNum;font-size:21px;font-style:normal;font-weight:900;line-height:normal}
+.cases .item .priceBox .code{color:#000;text-align:center;font-size:16px;font-style:normal;font-weight:900;line-height:normal}
+.cases .item .priceBox .price{color:#00a651;text-align:center;font-size:21px;font-style:normal;font-weight:900;line-height:normal}
 .cases .item .priceBox .price .prefix{margin-left:4px}
 .cases .productSlider{position:relative;text-align:center}
 .cases .productSlider i.icon-left.slick-arrow{position:absolute;left:20px;top:45%;cursor:pointer;margin-top:-5px;z-index:99999;background:TRANSPARENT;width:30px;height:30px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;border-radius:11px;background:#f7c231;justify-content:center}
@@ -623,13 +623,13 @@ div#map{border-radius:20px;margin-bottom:35px}
 .featureItem{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:33px}
 .featureItem i{margin-left:22px;color:#00a651}
 .featureItem h4{color:#292929;font-size:20px;font-style:normal;font-weight:900;line-height:normal}
-.featureItem h4 span{color:#444;text-align:center;font-family:IRANSansXFaNum;font-size:20px;font-style:normal;font-weight:400;line-height:normal;margin-right:10px}
+.featureItem h4 span{color:#444;text-align:center;font-size:20px;font-style:normal;font-weight:400;line-height:normal;margin-right:10px}
 .avatarBox{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly;border-radius:35px;border:1px solid #e6e6e6;background:#fff;padding:32px 10px;text-align:center}
-.avatarBox h2{color:#000;text-align:center;font-size:36px;font-style:normal;font-weight:900;line-height:normal}
+.avatarBox h2{color:#000;text-align:center;font-size:28px;font-style:normal;font-weight:900;line-height:normal}
 .avatarBox .detail p{color:#00a651;text-align:center;font-size:20px;font-style:normal;font-weight:500;line-height:normal;margin-bottom:10px}
 .avatarBox .detail a.call{color:#fff;text-align:center;font-size:24px;font-style:normal;font-weight:600;line-height:normal;padding:11px 30px;border-radius:15px;background:#00a651;display:inline-block;margin-bottom:26px}
 .avatarBox .detail .sharer i{font-size:30px;margin:0 15px}
-.avatarBox .avatar .profile{border-radius:56px;border:1px solid #000;width:100%}
+.avatarBox .avatar .profile{border-radius:56px;border:1px solid #000;width:80%}
 .avatarBox .avatar h5{text-align:center;color:#039898;font-size:16px;font-style:normal;font-weight:900;line-height:normal}
 .avatarBox .avatar .badge{text-align:center;margin-top:-10px}
 hr{border-top:1px solid #d0d0d0;margin:2em 1px 27px}
@@ -643,7 +643,7 @@ section.cases{margin:4em 0}
 .about img{scale:1.2}
 .about .aboutWrapper{padding:81px;background:#fef9ea;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:start;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;text-align:right;border-radius:26px;padding-right:75px}
 .about .aboutWrapper h4{color:#000;text-align:right;font-size:40px;font-style:normal;font-weight:900;line-height:normal;margin-bottom:26px}
-.about .aboutWrapper p{color:#001d0e;text-align:justify;font-family:IRANSansX;font-size:16px;font-style:normal;font-weight:300;line-height:normal}
+.about .aboutWrapper p{color:#001d0e;text-align:justify;font-size:16px;font-style:normal;font-weight:300;line-height:normal}
 footer .call{text-align:center}
 footer .call .item{margin-bottom:22px}
 footer .call .item h4{color:#333;font-size:23px;font-style:normal;font-weight:600;line-height:111%;margin-bottom:18px}
@@ -651,15 +651,37 @@ footer .call .item p{color:#f7c231;font-size:23px;font-style:normal;font-weight:
 footer .socials i{margin:12px;color:#7b7b7b;font-size:24px}
 footer ul.clinks li{font-size:16px;display:block;margin-right:0;text-align:center;margin-bottom:19px}
 .features{text-align:center}
-.features h4{color:#daa000;font-size:20px;font-style:normal;font-weight:800;line-height:normal}
+.features h4{color:#daa000;font-size:20px;font-style:normal;font-weight:800;line-height:normal;display:inline;margin-right:15px}
 .banner img{margin-bottom:2em}
+.cities{text-align:right;display:none;background:white;padding:27px;border-radius:30px;border:1px solid #d7d7d7}
+.cities h5.headingCities{background:#f7c231;padding:11px;border-radius:8px}
+.cities ul{padding:0}
+.cities ul li{list-style-type:none;background:#f7f7f7;margin:9px 0;padding:10px 15px;border-radius:12px;cursor:pointer}
+.cities ul li:hover{background:#ddd}
+h5.allCities{background:#3f51b5;padding:11px;color:#fff;border-radius:8px;margin-bottom:1em;display:inline-block}
+.allCitiesWrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.allCitiesWrapper svg.closeCities{position:relative;top:-7px;cursor:pointer}
+.blogItem img{margin-bottom:10px}
+.blogItem a{background:#f7c231;width:100%;display:block;color:#fff;padding:8px;border-radius:12px}
+.blogItem h5{font-size:17px !important;font-weight:500 !important}
+.singleBlog img{height:400px;width:100%;-o-object-fit:cover;object-fit:cover;border-radius:40px;margin-bottom:1em}
+.singleBlog h1{margin-bottom:1}
+.singleBlog .titleBlog{border-bottom:1px solid #f3f3f3;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:2em;padding-bottom:1em}
+.singleBlog .content p{text-align:justify;margin:10px 0}
+.care .address .titles{margin-right:20px;margin-bottom:0}
+.care .address{border:0 !important}
+.care .address i{font-size:28px;color:#ce991e !important;display:contents}
+.care .address .titles h4{font-style:normal;font-weight:700;font-size:20px;line-height:31px;color:#efb01d !important}
+.care .socials a{margin-left:11px !important}
+.single .cases .item img{border-radius:30px}
+.descriptionWrapper{padding:25px;background:#f6f6f6;border-radius:20px;border:1px solid #d6d6d6}
 .care{margin-top:81px}
 .care .socialIcons{margin-bottom:32px;border:1px solid #9696965c;padding:10px;font-size:25px;text-align:center}
 .care .socialIcons i{margin-left:25px;vertical-align:sub;color:#3e4151}
 .care .address{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:32px;border:1px solid #9696965c;padding:10px}
 .care .address i{font-size:28px;color:#62013a;display:contents}
 .care .address .titles{margin-right:20px}
-.care .address .titles h4{font-family:"Yekan Bakh";font-style:normal;font-weight:700;font-size:20px;line-height:31px;color:#62013a}
+.care .address .titles h4{font-style:normal;font-weight:700;font-size:20px;line-height:31px;color:#62013a}
 .care .address .titles p{font-style:normal;font-weight:400;font-size:20px;line-height:31px;text-align:right;color:#000}
 .care .fullAddress{font-style:normal !important;font-weight:500 !important;font-size:16px !important;line-height:25px !important;text-align:right !important;color:#000 !important}
 .care input.wpcf7-form-control.wpcf7-text,.care textarea.wpcf7-form-control.wpcf7-textarea{border:0;background:#f4f4f4;padding:14px;margin:0 0 33px;text-align:right;width:100%}
@@ -942,6 +964,8 @@ footer ul.clinks{margin-top:2em}
 .sublogo{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column}
 .sublogo h3{margin-right:0;padding-top:15px;font-size:20px}
 .newsletter .gform_button{position:absolute;top:40px;left:25px;padding:11px 15px !important;background:#005b4b !important;border-radius:15px !important;color:#fff !important;margin:0 !important}
+.avatarBox h2{font-size:24px}
+.avatarBox .detail a.call{font-size:17px}
 .care{margin-top:25px}
 }@media(max-width:576px){.container-lg-fluid{width:95%}
 }@media print{*,*:before,*:after{background:transparent !important;color:#000 !important;-webkit-box-shadow:none !important;box-shadow:none !important;text-shadow:none !important}

@@ -1069,6 +1069,19 @@
       vertical: true,
       verticalSwiping: true
     });
+    $(".filterCity").click(function () {
+      if ($(".filterCity").hasClass("active")) {
+        $(".filterListMain").fadeOut();
+        $(".cities").fadeIn();
+      } else {
+        $(".filterListMain").fadeIn();
+        $(".cities").fadeOut();
+      }
+    });
+    $(".singleCity, .closeCities").click(function () {
+      $(".filterListMain").fadeIn();
+      $(".cities").fadeOut();
+    });
   })(jQuery);
 
 }));
