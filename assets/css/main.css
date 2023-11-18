@@ -4532,6 +4532,8 @@ section.cases {
   color: #001d0e;
   text-align: justify;
   font-size: 16px;
+  -webkit-font-kerning: none;
+  font-kerning: none;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -4740,6 +4742,18 @@ h5.allCities {
   background: #f6f6f6;
   border-radius: 20px;
   border: 1px solid #d6d6d6;
+}
+
+.logoBox {
+  height: auto;
+  text-align: center;
+  margin: -10px auto 0;
+}
+
+p.footerAbout {
+  text-align: justify;
+  -webkit-font-kerning: none;
+  font-kerning: none;
 }
 
 .care {
@@ -6343,6 +6357,22 @@ h5.allCities {
     padding: 25px;
   }
 
+  .features h4 {
+    margin: 10px 0 1em;
+    color: #daa000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
   .p-0 {
     padding: 0 !important;
     width: 100%;
@@ -6408,7 +6438,7 @@ h5.allCities {
   }
 
   footer ul.clinks {
-    margin-top: 2em;
+    margin-top: 0;
   }
 
   .sublogo {
@@ -6435,12 +6465,32 @@ h5.allCities {
     margin: 0 !important;
   }
 
+  .titles h5 {
+    font-size: 22px;
+  }
+
+  .titles .all {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 15px;
+    background: #00a651;
+    padding: 13px 23px;
+  }
+
   .avatarBox h2 {
     font-size: 24px;
   }
 
   .avatarBox .detail a.call {
     font-size: 17px;
+  }
+
+  .logoMobile {
+    position: absolute;
+    top: 12px;
   }
 
   .care {
