@@ -643,7 +643,7 @@ section.cases{margin:4em 0}
 .about img{scale:1.2}
 .about .aboutWrapper{padding:81px;background:#fef9ea;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:start;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;text-align:right;border-radius:26px;padding-right:75px}
 .about .aboutWrapper h4{color:#000;text-align:right;font-size:40px;font-style:normal;font-weight:900;line-height:normal;margin-bottom:26px}
-.about .aboutWrapper p{color:#001d0e;text-align:justify;font-size:16px;font-style:normal;font-weight:300;line-height:normal}
+.about .aboutWrapper p{color:#001d0e;text-align:justify;font-size:16px;-webkit-font-kerning:none;font-kerning:none;font-style:normal;font-weight:300;line-height:normal}
 footer .call{text-align:center}
 footer .call .item{margin-bottom:22px}
 footer .call .item h4{color:#333;font-size:23px;font-style:normal;font-weight:600;line-height:111%;margin-bottom:18px}
@@ -675,6 +675,8 @@ h5.allCities{background:#3f51b5;padding:11px;color:#fff;border-radius:8px;margin
 .care .socials a{margin-left:11px !important}
 .single .cases .item img{border-radius:30px}
 .descriptionWrapper{padding:25px;background:#f6f6f6;border-radius:20px;border:1px solid #d6d6d6}
+.logoBox{height:auto;text-align:center;margin:-10px auto 0}
+p.footerAbout{text-align:justify;-webkit-font-kerning:none;font-kerning:none}
 .care{margin-top:81px}
 .care .socialIcons{margin-bottom:32px;border:1px solid #9696965c;padding:10px;font-size:25px;text-align:center}
 .care .socialIcons i{margin-left:25px;vertical-align:sub;color:#3e4151}
@@ -950,6 +952,7 @@ img.item-slick.slick-slide{z-index:1 !important}
 .productDescription .price{margin-bottom:20px}
 .about img{scale:1;width:100%}
 .about .aboutWrapper{padding:25px}
+.features h4{margin:10px 0 1em;color:#daa000;font-size:20px;font-style:normal;font-weight:800;line-height:normal;margin-right:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .p-0{padding:0 !important;width:100%}
 .certs{margin:1em 1em 3em;text-align:center}
 }@media only screen and (max-width:767px){.clear{margin-bottom:18px}
@@ -960,12 +963,15 @@ img.item-slick.slick-slide{z-index:1 !important}
 .slidercontainer-lg{height:648px}
 .slidercontainer-lg .item{width:100%}
 .footerWrapper{background:#e91e63;border-radius:15px;margin-top:3em;padding:31px 20px;background-position:center !important;background-size:cover !important;background-repeat:no-repeat !important}
-footer ul.clinks{margin-top:2em}
+footer ul.clinks{margin-top:0}
 .sublogo{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column}
 .sublogo h3{margin-right:0;padding-top:15px;font-size:20px}
 .newsletter .gform_button{position:absolute;top:40px;left:25px;padding:11px 15px !important;background:#005b4b !important;border-radius:15px !important;color:#fff !important;margin:0 !important}
+.titles h5{font-size:22px}
+.titles .all{color:#fff;font-size:16px;font-style:normal;font-weight:600;line-height:normal;border-radius:15px;background:#00a651;padding:13px 23px}
 .avatarBox h2{font-size:24px}
 .avatarBox .detail a.call{font-size:17px}
+.logoMobile{position:absolute;top:12px}
 .care{margin-top:25px}
 }@media(max-width:576px){.container-lg-fluid{width:95%}
 }@media print{*,*:before,*:after{background:transparent !important;color:#000 !important;-webkit-box-shadow:none !important;box-shadow:none !important;text-shadow:none !important}
