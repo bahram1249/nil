@@ -605,11 +605,11 @@ div#map{border-radius:20px;margin-bottom:35px}
 .slick-arrow{position:absolute;top:50%;z-index:50;margin-top:-12px}
 .slick-prev{left:0}
 .slick-next{right:0}
-.slider-nav .slick-list{overflow:hidden;height:100% !important;width:100%}
+.slider-nav .slick-list{overflow:hidden;height:80% !important;width:100%}
 .slider-nav .slick-list .slick-track{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;width:100% !important;height:100% !important;-webkit-box-align:end;-ms-flex-align:end;align-items:end;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;pointer-events:none;-webkit-transform:unset !important;transform:unset !important}
 .slider-container-lg{position:relative}
 .slider-container-lg .slider-nav{position:absolute;left:0;text-align:left;top:0;width:100%;z-index:99999999999999999;display:-webkit-box;display:-ms-flexbox;display:flex;height:100%;pointer-events:none}
-.slider-nav .item-slick{width:101px;margin-right:15px;outline:none !important;cursor:pointer;height:85px !important;-o-object-fit:cover;object-fit:cover;margin:10px 10px 11px 25px;border:2px solid white;pointer-events:all;border-radius:24px}
+.slider-nav .item-slick{width:101px;margin-right:15px;outline:none !important;cursor:pointer;height:85px !important;-o-object-fit:cover;object-fit:cover;margin:10px 10px 11px 55px;border:2px solid white;pointer-events:all;border-radius:24px}
 .slider-nav img.item-slick.slick-slide.slick-current.slick-active{width:151px;height:85px !important}
 .slider-container-lg:before{content:"";position:absolute;left:0;top:0;pointer-events:none;width:100%;height:100%;z-index:9;border-radius:29px;background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.64)));background:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,0.64) 100%)}
 .productDescription{color:#fff !important;position:relative;top:-167px;z-index:999999999;margin:0 45px -130px}
@@ -677,6 +677,8 @@ h5.allCities{background:#3f51b5;padding:11px;color:#fff;border-radius:8px;margin
 .descriptionWrapper{padding:25px;background:#f6f6f6;border-radius:20px;border:1px solid #d6d6d6}
 .logoBox{height:auto;text-align:center;margin:-10px auto 0}
 p.footerAbout{text-align:justify;-webkit-font-kerning:none;font-kerning:none}
+.productDetail .slick-arrow{width:30px;display:-webkit-box;display:-ms-flexbox;display:flex;height:30px;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;border:0;border-radius:8px;margin:-10px 6px auto;background:#ffc107;color:#fff;z-index:999999}
+.productDetail .slick-arrow i{position:relative;top:3px}
 .care{margin-top:81px}
 .care .socialIcons{margin-bottom:32px;border:1px solid #9696965c;padding:10px;font-size:25px;text-align:center}
 .care .socialIcons i{margin-left:25px;vertical-align:sub;color:#3e4151}

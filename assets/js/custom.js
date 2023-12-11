@@ -1048,21 +1048,36 @@
     $carousel.slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
       fade: true,
       adaptiveHeight: true,
       rtl: true,
       autoplay: true,
       infinite: true,
-      asNavFor: ".slider-nav"
+      asNavFor: ".slider-nav",
+      prevArrow: "<button class='slick-prev slick-arrow' aria-label='Next' type='button' style=''><i class='icon-left'></i></button>",
+      nextArrow: "<button class='slick-next slick-arrow' aria-label='Next' type='button' style=''><i class='icon-right'></i></button>",
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+      ]
     });
+
     $(".slider-nav").slick({
-      slidesToShow: 6,
+      slidesToShow: 3,
       slidesToScroll: 1,
       asNavFor: ".slider-for",
       dots: false,
+      arrows: false,
       rtl: true,
-      infinite: true,
+      infinite: false,
       centerMode: false,
       focusOnSelect: true,
       variableWidth: true,

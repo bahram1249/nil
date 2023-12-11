@@ -4201,7 +4201,7 @@ div#map {
 
 .slider-nav .slick-list {
   overflow: hidden;
-  height: 100% !important;
+  height: 80% !important;
   width: 100%;
 }
 
@@ -4252,7 +4252,7 @@ div#map {
   height: 85px !important;
   -o-object-fit: cover;
   object-fit: cover;
-  margin: 10px 10px 11px 25px;
+  margin: 10px 10px 11px 55px;
   border: 2px solid white;
   pointer-events: all;
   border-radius: 24px;
@@ -4754,6 +4754,31 @@ p.footerAbout {
   text-align: justify;
   -webkit-font-kerning: none;
   font-kerning: none;
+}
+
+.productDetail .slick-arrow {
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  margin: -10px 6px auto;
+  background: #ffc107;
+  color: #fff;
+  z-index: 999999;
+}
+
+.productDetail .slick-arrow i {
+  position: relative;
+  top: 3px;
 }
 
 .care {
